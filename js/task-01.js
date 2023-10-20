@@ -11,10 +11,10 @@ console.log(`Number of categories: ${categoryItems.length}`);
 // Циклом проходимо по кожному елементу li.item
 categoryItems.forEach(category => {
   // Отримуємо текст заголовку (тег h2) для кожної категорії
-  const categoryName = category.querySelector('h2').textContent;
+  const categoryName = category.firstElementChild.textContent;
 
   // Отримуємо всі підкатегорії (елементи li) у даній категорії
-  const subcategories = category.querySelectorAll('ul li');
+  const subcategories = category.lastElementChild.children;
 
   console.log('');
   // Виводимо назву категорії та кількість елементів у ній
